@@ -1,34 +1,24 @@
-import React from 'react';
-import { Grid, Paper, Box, Typography, Container, IconButton } from '@mui/material';
+import React from "react";
+import { Grid, Pagination } from "@mui/material";
+import { usePagination } from "../hooks/Films.Storage";
 
-import { ReactComponent as RightIcon } from '../assets/right.svg';
-import { ReactComponent as LeftIcon } from '../assets/left.svg';
+function Header() {
+  const { page, count, handlePage } = usePagination();
 
-
-function Header(){
-    return (
-       <Grid 
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-            sx={{
-                bgcolor: 'background.header',
-                height: '100px',
-            }}>
-            <IconButton>
-                <LeftIcon fontSize='small' />
-            </IconButton>
-            <Grid item xs={2}>
-                <Typography variant="h4" align='center'>
-                    1 / 10
-                </Typography>
-            </Grid>
-            <IconButton>
-                <RightIcon fontSize='small' />
-            </IconButton>
-        </Grid>
-    );
-};
+  return (
+    <Grid
+      container
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+      sx={{
+        bgcolor: "background.header",
+        height: "100px"
+      }}
+    >
+      <Pagination count={count} page={page} onChange={handlePage} />
+    </Grid>
+  );
+}
 
 export default Header;
