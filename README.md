@@ -1,3 +1,5 @@
+# Projeto feito para consumir API de FIlmes com REACT.JS e NODE.JS
+
 # Este é um monorepo com o frontend e o backend.
 
 ## Frontend

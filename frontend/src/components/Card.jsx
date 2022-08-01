@@ -51,7 +51,7 @@ export function Card({ item }) {
   };
 
   return (
-    <Grid item xs={3} sm={12} md={6} lg={3}>
+    <Grid item xs={12} sm={12} md={6} lg={3}>
       <Item {...events} image={item.movie_banner}>
         <Fade active={isOpen} />
         <Title
