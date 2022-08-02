@@ -44,7 +44,7 @@ export const PaginationProvider = ({ children }) => {
 
   useEffect(() => {
     fetchData();
-  }, [fetchData, page]);
+  }, [fetchData]);
 
   const count = useMemo(() => {
     return items.length;
